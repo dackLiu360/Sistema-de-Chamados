@@ -140,30 +140,30 @@ public class ControleChamados {
             			break;
             			
             		case 4 :
-            			prioridade = "Crítica";
+            			prioridade = "Critica";
             			break;
             	}
                 relatorio += "\n" + "--------" + "\nData de abertura do chamado: " +
                     	ref.getData() + 
-                    	"\nHorário de abertura do chamado: " + ref.getHora() + 
-                    	"\nTítulo do chamado: " + ref.getTitulo() + 
-                    	"\nCódigo do chamado: " + ref.getCodigo() +
-                    	"\nDescrição do chamado: " + ref.getDescricao() + 
+                    	"\nHorario de abertura do chamado: " + ref.getHora() + 
+                    	"\nTitulo do chamado: " + ref.getTitulo() + 
+                    	"\nCodigo do chamado: " + ref.getCodigo() +
+                    	"\nDescriÃ§Ã£o do chamado: " + ref.getDescricao() + 
                     	"\nPrioridade do chamado: " + prioridade + 
                     	"\nStatus do chamado: " + ref.getStatus() + 
                     	"\nTipo de problema do chamado: " + ref.getTipoProblema() + 
-                    	"\nTécnico responsável pelo chamado: " + ref.getTecnico() + 
+                    	"\nTecnico responsavel pelo chamado: " + ref.getTecnico() + 
                     	"\nCliente requisitor do chamado: " + ref.getCliente() + "\n";
                 
                 for(RegistroChamado rc : registros){
                 	if(rc.getChamado().equals(ref)){
-                		relatorio += "\nRelatório de registros de acompanhamento:" + 
+                		relatorio += "\nRelatorio de registros de acompanhamento:" + 
                 	"\nData: " + rc.getData() + 
                 	"\nHora: " + rc.getHora() + 
                 	"\nAssunto: " + rc.getAssunto() +
-                	"\nTécnico responsável: " + rc.getTecnico().getNome() +
+                	"\nTecnico responsavel: " + rc.getTecnico().getNome() +
                 	"\nCausa do problema: " + ref.getCausaProblema() + 
-                	"\nSolução do problema: " + ref.getSolucaoProblema();
+                	"\nSoluÃ§Ã£o do problema: " + ref.getSolucaoProblema();
                 	}
                 }
             }

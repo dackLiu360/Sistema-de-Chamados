@@ -193,7 +193,7 @@ public class TelaCadastroChamado extends JFrame {
         cts.gridy = 3;
         container.add(cbBancoDados, cts);
 
-        lbProblemaDesempenho = new JLabel("Informar a operação: ");
+        lbProblemaDesempenho = new JLabel("Informar a operaÃ§Ã£o: ");
         lbProblemaDesempenho.setVisible(false);
         cts.gridx = 0;
         cts.gridy = 3;
@@ -259,7 +259,7 @@ public class TelaCadastroChamado extends JFrame {
         tfPrioridade.addItem("Normal");
         tfPrioridade.addItem("Importante");
         tfPrioridade.addItem("Urgente");
-        tfPrioridade.addItem("Crítica");        
+        tfPrioridade.addItem("Critica");        
         tfPrioridade.setPreferredSize(new Dimension(150, 20));
         cts.fill = GridBagConstraints.HORIZONTAL;
         cts.gridx = 1;
@@ -279,7 +279,7 @@ public class TelaCadastroChamado extends JFrame {
         cts.gridx = 1;
         cts.gridy = 8;
         container.add(cbSO, cts);
-        lbVersaoSO = new JLabel("Versão SO: ");
+        lbVersaoSO = new JLabel("VersÃ£o SO: ");
         cts.gridx = 0;
         cts.gridy = 9;
 
@@ -334,7 +334,7 @@ public class TelaCadastroChamado extends JFrame {
                 		prioridade = 2;
                 	}else if(tfPrioridade.getSelectedItem().equals("Urgente")){
                 		prioridade = 3;
-                	}else if(tfPrioridade.getSelectedItem().equals("Crítica")){
+                	}else if(tfPrioridade.getSelectedItem().equals("CrÃ­tica")){
                 		prioridade = 4;
                 	}
                 	
@@ -366,7 +366,7 @@ public class TelaCadastroChamado extends JFrame {
                 		prioridade = 2;
                 	}else if(tfPrioridade.getSelectedItem().equals("Urgente")){
                 		prioridade = 3;
-                	}else if(tfPrioridade.getSelectedItem().equals("Crítica")){
+                	}else if(tfPrioridade.getSelectedItem().equals("Critica")){
                 		prioridade = 4;
                 	}
                 	
@@ -389,7 +389,7 @@ public class TelaCadastroChamado extends JFrame {
                 		prioridade = 2;
                 	}else if(tfPrioridade.getSelectedItem().equals("Urgente")){
                 		prioridade = 3;
-                	}else if(tfPrioridade.getSelectedItem().equals("Crítica")){
+                	}else if(tfPrioridade.getSelectedItem().equals("Critica")){
                 		prioridade = 4;
                 	}
                 	
