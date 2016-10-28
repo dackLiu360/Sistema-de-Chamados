@@ -10,28 +10,6 @@
 <project name="SistemaDeChamados" default="default" basedir="." xmlns:j2seproject3="http://www.netbeans.org/ns/j2se-project/3">
     <description>Builds, tests, and runs the project SistemaDeChamados.</description>
     <import file="nbproject/build-impl.xml"/>
-    
-       <target depends="init,deps-jar,-pre-pre-compile,-pre-compile, -copy-persistence-xml, -compile-depend,-prepare-sources" if="have.sources" name="-do-compile">
-        <j2seproject3:javac gensrcdir="${build.generated.sources.dir}" srcdir="build/temp-src"/>
-        <copy todir="${build.classes.dir}">
-            <fileset dir="${src.dir}" excludes="${build.classes.excludes},${excludes}" includes="${includes}"/>
-        </copy>
-    </target>
-
-    <!-- target to alter sources before compilation, you can add any preprocessing actions here -->
-    <target name="-filter-sources" description="Filters sources to temp-src, setting the build date">
-        <delete dir="build/temp-src" />
-        <mkdir dir="build/temp-src" />
-        <tstamp>
-           <format property="build.time" pattern="yyyy-MM-dd HH:mm:ss"/>
-        </tstamp>
-        <filter token="build-time" value="${build.time}" />
-        <copy todir="build/temp-src" filtering="true">
-            <fileset dir="src">
-                <filename name="**/*.java" />
-            </fileset>
-        </copy>
-    </target>
     <!--
 
     There exist several targets which are by default empty and which can be 
