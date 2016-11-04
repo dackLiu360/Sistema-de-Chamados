@@ -57,7 +57,7 @@ public class ControleChamadosTest {
         Assert.assertTrue((chamado.getTitulo().equals(chamadoInserido.getTitulo())) && (chamado.getDescricao().equals(chamadoInserido.getDescricao())) && (chamado.getPrioridade() == chamadoInserido.getPrioridade()) && ((chamado.getTecnico().getNome().equals(chamadoInserido.getTecnico().getNome())) && (chamado.getTecnico().getTelefone() == chamadoInserido.getTecnico().getTelefone())) && (chamado.getCliente().getCpf() == chamadoInserido.getCliente().getCpf()) && (chamado.getSistemaOperacional().equals(chamadoInserido.getSistemaOperacional())) && (chamado.getVersaoSO().equals(chamadoInserido.getVersaoSO())) && (chamado.getOperacao().equals(chamadoInserido.getOperacao())) && (chamado.getDuracaoOperacao() == chamadoInserido.getDuracaoOperacao()));
     }
 
-    /*
+    
     @Test
     public void inserirRegistroChamadoTest() {
         Tecnico tecnico = new Tecnico("Júlio da Silva", 44547896L);
@@ -67,51 +67,8 @@ public class ControleChamadosTest {
         ct.inserirRegistroChamado(registro.getAssunto(), registro.getChamado(), registro.getTecnico());
         Assert.fail("Método para recuperação de um registro de chamado não existe na classe ControleChamados");
 
-    }*/
-
-    /*
-    @Test
-    public void emissaoDetalheChamadoTest() {
-        Chamado c = new Chamado("Tabela Não Existe", "Esqueceram de algo", 8, (new Tecnico("Lucas Silva", 44587896L)), (new ClienteEmpresa(Integer.SIZE, (new Empresa(1015, "Mackenzie")), 45473486851L, "Lucas", 44536651)), "Windows", "7", BancoDeDados.Oracle + "");
-        String detalhes = "\n" + "--------" + "\n" + "Data de abertura do chamado: "
-                + c.getData() + "\n" + "Hororio de abertura do chamado: " + c.getHora() + "\n"
-                + "Titulo do chamado: " + "Tabela Não Existe" + "\n" + "Descricao do chamado: " + "Esqueceram de algo" + "\n"
-                + "Prioridade do chamado" + "8" + "\n" + "Status do chamado: " + "iniciado" + "\n"
-                + "Tipo de problema do chamado: " + "Banco de Dados" + "\n" + "Tecnico responsovel pelo chamado: "
-                + "João da Silva" + "\n" + "Cliente requisitor do chamado: " + "Contrato: " + "1006"
-                + " - Nome Empresa:" + "Mackenzie" + " - Cliente: "
-                + "45473486851L" + " - " + "Lucas" + "\n";
-        ControleChamados ct = new ControleChamados();
-        assertEquals(detalhes, ct.retornaDetalhesChamado(c));
-
-    }*/
-    
-    /*
-    @Test
-    public void emitirRelatorioTest() {
-        ControleChamados ct = new ControleChamados();
-        String relatorio = ct.emitirRelatorios(1);
-
-    }*/
-
-    /*
-    @Test
-    public void contarChamadosCliente() {
-        ClienteEmpresa cliente = new ClienteEmpresa(Integer.SIZE, (new Empresa(1006, "Vivo")), 45473486851L, "Jonatas", 44536651);
-        Chamado chamado = new Chamado(3, "Problema no Modem", "O Modem não liga", 5, (new Tecnico("João da Silva", 44587896L)), cliente, SistemaOperacional.WINDOWS + "", "10", TipoConexao.ADSL + "", "19216801");
-        Chamado c = new Chamado("Tabela Inexistente", "Os responsáveis pela criação das tabelas, esqueceram uma ", 8, (new Tecnico("João da Silva", 44587896L)), (new ClienteEmpresa(Integer.SIZE, (new Empresa(1006, "Vivo")), 45473486851L, "Jonatas", 44536651)), "Windows", "10", BancoDeDados.MySql + "");
-        ControleChamados ct = new ControleChamados();
-        ChamadoDAO dao = new ChamadoDAO();
-        Collection<Chamado> chamados = dao.getChamados();
-        int chamadoCliente = 0;
-        for (Chamado chamado1 : chamados) {
-            if (chamado.getCliente().getCpf() == 45473486851L) {
-                chamadoCliente++;
-            }
-        }
-        assertEquals(chamadoCliente, ct.validarQtdChamados(cliente));
     }
-    */
+    
     @Test
     public void alterarChamadoTest() {
         Chamado chamado = new Chamado("Tabela Inexistente", "Os responsáveis pela criação das tabelas, esqueceram uma ", 8, (new Tecnico("João da Silva", 44587896L)), (new ClienteEmpresa(Integer.SIZE, (new Empresa(1006, "Vivo")), 45473486851L, "Jonatas", 44536651)), "Windows", "10", BancoDeDados.MySql + "");

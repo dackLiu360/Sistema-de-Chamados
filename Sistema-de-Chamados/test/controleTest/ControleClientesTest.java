@@ -21,7 +21,8 @@ import org.junit.Test;
 public class ControleClientesTest {
 
     /**
-     *
+     *Teste responsável por inserir um novo cliente
+     *Para sucesso, o nome e o cpf que foi informado para criação deverá ser o que foi guardado.
      */
     @Test
     public void inserirNovoClienteTest() {
@@ -45,7 +46,8 @@ public class ControleClientesTest {
     }
 
     /**
-     *
+     *Teste responsável por remover um cliente
+     *Para sucesso, o teste deverá validar se o cliente criado foi excluido.
      */
     @Test
     public void removerClienteTest(){

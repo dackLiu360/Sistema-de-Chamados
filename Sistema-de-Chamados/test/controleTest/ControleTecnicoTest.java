@@ -17,6 +17,10 @@ import org.junit.Test;
 public class ControleTecnicoTest {
 
 
+    /*
+    *Teste responsável por inserir um técnico.
+    *Para sucesso, o nome e o telefone que foi informado para criação deverá ser o que foi guardado.
+    */    
     @Test
     public void inserirTecnicoTest() {
         ControleTecnicos ct = new ControleTecnicos();
