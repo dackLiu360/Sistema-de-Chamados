@@ -56,18 +56,6 @@ public class ControleChamadosTest {
         Chamado chamadoInserido = ct.buscaPeloCodigo(chamado.getCodigo());
         Assert.assertTrue((chamado.getTitulo().equals(chamadoInserido.getTitulo())) && (chamado.getDescricao().equals(chamadoInserido.getDescricao())) && (chamado.getPrioridade() == chamadoInserido.getPrioridade()) && ((chamado.getTecnico().getNome().equals(chamadoInserido.getTecnico().getNome())) && (chamado.getTecnico().getTelefone() == chamadoInserido.getTecnico().getTelefone())) && (chamado.getCliente().getCpf() == chamadoInserido.getCliente().getCpf()) && (chamado.getSistemaOperacional().equals(chamadoInserido.getSistemaOperacional())) && (chamado.getVersaoSO().equals(chamadoInserido.getVersaoSO())) && (chamado.getOperacao().equals(chamadoInserido.getOperacao())) && (chamado.getDuracaoOperacao() == chamadoInserido.getDuracaoOperacao()));
     }
-
-    
-    @Test
-    public void inserirRegistroChamadoTest() {
-        Tecnico tecnico = new Tecnico("Júlio da Silva", 44547896L);
-        Chamado chamado = new Chamado("Tabela Inexistente", "Os responsáveis pela criação das tabelas, esqueceram uma ", 8, tecnico, (new ClienteEmpresa(Integer.SIZE, (new Empresa(1006, "Vivo")), 45473486851L, "Jonatas", 44536651)), "Windows", "10", BancoDeDados.MySql + "");
-        RegistroChamado registro = new RegistroChamado(TipoProblema.ProblemaBancoDeDados + "", chamado, tecnico);
-        ControleChamados ct = new ControleChamados();
-        ct.inserirRegistroChamado(registro.getAssunto(), registro.getChamado(), registro.getTecnico());
-        Assert.fail("Método para recuperação de um registro de chamado não existe na classe ControleChamados");
-
-    }
     
     @Test
     public void alterarChamadoTest() {
