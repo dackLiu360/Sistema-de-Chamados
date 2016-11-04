@@ -190,7 +190,7 @@ public class ControleChamados {
 
         String detalhes = "\n" + "--------" + "\n" + "Data de abertura do chamado: "
                 + c.getData() + "\n" + "Hororio de abertura do chamado: " + c.getHora() + "\n"
-                + "Titulo do chamado: " + c.getTitulo() + "\n" + "Descri��o do chamado: " + c.getDescricao() + "\n"
+                + "Titulo do chamado: " + c.getTitulo() + "\n" + "Descrição do chamado: " + c.getDescricao() + "\n"
                 + "Prioridade do chamado" + c.getPrioridade() + "\n" + "Status do chamado: " + c.getStatus() + "\n"
                 + "Tipo de problema do chamado: " + c.getTipoProblema() + "\n" + "Tecnico responsovel pelo chamado: "
                 + c.getTecnico() + "\n" + "Cliente requisitor do chamado: " + c.getCliente() + "\n";
